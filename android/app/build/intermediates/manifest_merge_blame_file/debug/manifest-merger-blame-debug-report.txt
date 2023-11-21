@@ -1,0 +1,145 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.vnhabittracker"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="33" />
+10
+11    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+11-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/debug/AndroidManifest.xml:5:5-77
+11-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/debug/AndroidManifest.xml:5:22-75
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/main/AndroidManifest.xml:2:3-64
+12-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/main/AndroidManifest.xml:2:20-62
+13    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+13-->[com.facebook.flipper:flipper:0.182.0] /Users/administrator/.gradle/caches/transforms-3/e13f88164840fe641a466d05cd8edac7/transformed/jetified-flipper-0.182.0/AndroidManifest.xml:16:5-76
+13-->[com.facebook.flipper:flipper:0.182.0] /Users/administrator/.gradle/caches/transforms-3/e13f88164840fe641a466d05cd8edac7/transformed/jetified-flipper-0.182.0/AndroidManifest.xml:16:22-73
+14
+15    <application
+15-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/main/AndroidManifest.xml:3:3-24:17
+16        android:name="com.vnhabittracker.MainApplication"
+16-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/main/AndroidManifest.xml:3:16-47
+17        android:allowBackup="false"
+17-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/main/AndroidManifest.xml:3:162-189
+18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+18-->[androidx.core:core:1.8.0] /Users/administrator/.gradle/caches/transforms-3/9623e378e4dfc57c47793d0ffd25ee05/transformed/core-1.8.0/AndroidManifest.xml:24:18-86
+19        android:debuggable="true"
+20        android:icon="@mipmap/ic_launcher"
+20-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/main/AndroidManifest.xml:3:81-115
+21        android:label="@string/app_name"
+21-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/main/AndroidManifest.xml:3:48-80
+22        android:roundIcon="@mipmap/ic_launcher_round"
+22-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/main/AndroidManifest.xml:3:116-161
+23        android:theme="@style/AppTheme"
+23-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/main/AndroidManifest.xml:3:190-221
+24        android:usesCleartextTraffic="true" >
+24-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/debug/AndroidManifest.xml:8:9-44
+25        <activity
+25-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/debug/AndroidManifest.xml:11:9-111
+26            android:name="com.facebook.react.devsupport.DevSettingsActivity"
+26-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/debug/AndroidManifest.xml:11:19-83
+27            android:exported="false" />
+27-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/debug/AndroidManifest.xml:11:84-108
+28        <activity
+28-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/main/AndroidManifest.xml:4:5-23:16
+29            android:name="com.vnhabittracker.MainActivity"
+29-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/main/AndroidManifest.xml:4:15-43
+30            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+30-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/main/AndroidManifest.xml:4:77-186
+31            android:exported="true"
+31-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/main/AndroidManifest.xml:4:297-320
+32            android:label="@string/app_name"
+32-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/main/AndroidManifest.xml:4:44-76
+33            android:launchMode="singleTask"
+33-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/main/AndroidManifest.xml:4:187-218
+34            android:theme="@style/SplashTheme"
+34-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/main/AndroidManifest.xml:4:219-253
+35            android:windowSoftInputMode="adjustResize" >
+35-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/main/AndroidManifest.xml:4:254-296
+36            <intent-filter>
+36-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/main/AndroidManifest.xml:5:7-8:23
+37                <action android:name="android.intent.action.MAIN" />
+37-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/main/AndroidManifest.xml:6:9-60
+37-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/main/AndroidManifest.xml:6:17-58
+38
+39                <category android:name="android.intent.category.LAUNCHER" />
+39-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/main/AndroidManifest.xml:7:9-68
+39-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/main/AndroidManifest.xml:7:19-66
+40            </intent-filter>
+41            <intent-filter android:autoVerify="true" >
+41-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/main/AndroidManifest.xml:9:7-14:23
+41-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/main/AndroidManifest.xml:9:22-47
+42                <action android:name="android.intent.action.VIEW" />
+42-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/main/AndroidManifest.xml:10:9-60
+42-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/main/AndroidManifest.xml:10:17-58
+43
+44                <category android:name="android.intent.category.DEFAULT" />
+44-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/main/AndroidManifest.xml:11:9-67
+44-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/main/AndroidManifest.xml:11:19-65
+45                <category android:name="android.intent.category.BROWSABLE" />
+45-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/main/AndroidManifest.xml:12:9-69
+45-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/main/AndroidManifest.xml:12:19-67
+46
+47                <data android:scheme="vnhabittracker" />
+47-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/main/AndroidManifest.xml:13:9-48
+47-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/main/AndroidManifest.xml:13:15-46
+48            </intent-filter>
+49            <intent-filter android:autoVerify="true" >
+49-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/main/AndroidManifest.xml:15:7-22:17
+49-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/main/AndroidManifest.xml:15:22-47
+50                <action android:name="android.intent.action.VIEW" />
+50-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/main/AndroidManifest.xml:10:9-60
+50-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/main/AndroidManifest.xml:10:17-58
+51
+52                <category android:name="android.intent.category.DEFAULT" />
+52-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/main/AndroidManifest.xml:11:9-67
+52-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/main/AndroidManifest.xml:11:19-65
+53                <category android:name="android.intent.category.BROWSABLE" />
+53-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/main/AndroidManifest.xml:12:9-69
+53-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/main/AndroidManifest.xml:12:19-67
+54
+55                <data android:scheme="http" />
+55-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/main/AndroidManifest.xml:13:9-48
+55-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/main/AndroidManifest.xml:13:15-46
+56                <data android:scheme="https" />
+56-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/main/AndroidManifest.xml:13:9-48
+56-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/main/AndroidManifest.xml:13:15-46
+57                <data android:host="vnhabittracker.com" />
+57-->/Users/administrator/Desktop/nhan_tran/VNHabitTracker/android/app/src/main/AndroidManifest.xml:13:9-48
+58            </intent-filter>
+59        </activity>
+60
+61        <meta-data
+61-->[com.facebook.soloader:soloader:0.10.5] /Users/administrator/.gradle/caches/transforms-3/ec3312a013bd7d8a70466a1977a1dba4/transformed/jetified-soloader-0.10.5/AndroidManifest.xml:12:9-14:37
+62            android:name="com.facebook.soloader.enabled"
+62-->[com.facebook.soloader:soloader:0.10.5] /Users/administrator/.gradle/caches/transforms-3/ec3312a013bd7d8a70466a1977a1dba4/transformed/jetified-soloader-0.10.5/AndroidManifest.xml:13:13-57
+63            android:value="false" />
+63-->[com.facebook.soloader:soloader:0.10.5] /Users/administrator/.gradle/caches/transforms-3/ec3312a013bd7d8a70466a1977a1dba4/transformed/jetified-soloader-0.10.5/AndroidManifest.xml:14:13-34
+64
+65        <provider
+65-->[androidx.emoji2:emoji2:1.2.0] /Users/administrator/.gradle/caches/transforms-3/259206a491dfa4b8b6052b2b1c41d979/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+66            android:name="androidx.startup.InitializationProvider"
+66-->[androidx.emoji2:emoji2:1.2.0] /Users/administrator/.gradle/caches/transforms-3/259206a491dfa4b8b6052b2b1c41d979/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
+67            android:authorities="com.vnhabittracker.androidx-startup"
+67-->[androidx.emoji2:emoji2:1.2.0] /Users/administrator/.gradle/caches/transforms-3/259206a491dfa4b8b6052b2b1c41d979/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
+68            android:exported="false" >
+68-->[androidx.emoji2:emoji2:1.2.0] /Users/administrator/.gradle/caches/transforms-3/259206a491dfa4b8b6052b2b1c41d979/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
+69            <meta-data
+69-->[androidx.emoji2:emoji2:1.2.0] /Users/administrator/.gradle/caches/transforms-3/259206a491dfa4b8b6052b2b1c41d979/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+70                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+70-->[androidx.emoji2:emoji2:1.2.0] /Users/administrator/.gradle/caches/transforms-3/259206a491dfa4b8b6052b2b1c41d979/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
+71                android:value="androidx.startup" />
+71-->[androidx.emoji2:emoji2:1.2.0] /Users/administrator/.gradle/caches/transforms-3/259206a491dfa4b8b6052b2b1c41d979/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
+72            <meta-data
+72-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/administrator/.gradle/caches/transforms-3/b1c537e6049df5a2dcb1a9b20b1a8868/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+73                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+73-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/administrator/.gradle/caches/transforms-3/b1c537e6049df5a2dcb1a9b20b1a8868/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+74                android:value="androidx.startup" />
+74-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/administrator/.gradle/caches/transforms-3/b1c537e6049df5a2dcb1a9b20b1a8868/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+75        </provider>
+76    </application>
+77
+78</manifest>
