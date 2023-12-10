@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "ShareShareApp.app"
-               BlueprintName = "ShareShareApp"
-               ReferencedContainer = "container:ShareShareApp.xcodeproj">
+               BuildableName = "BeGreat.app"
+               BlueprintName = "BeGreat"
+               ReferencedContainer = "container:BeGreat.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "ShareShareAppTests.xctest"
-               BlueprintName = "ShareShareAppTests"
-               ReferencedContainer = "container:ShareShareApp.xcodeproj">
+               BuildableName = "BeGreatTests.xctest"
+               BlueprintName = "BeGreatTests"
+               ReferencedContainer = "container:BeGreat.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "ShareShareApp.app"
-            BlueprintName = "ShareShareApp"
-            ReferencedContainer = "container:ShareShareApp.xcodeproj">
+            BuildableName = "BeGreat.app"
+            BlueprintName = "BeGreat"
+            ReferencedContainer = "container:BeGreat.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "ShareShareApp.app"
-            BlueprintName = "ShareShareApp"
-            ReferencedContainer = "container:ShareShareApp.xcodeproj">
+            BuildableName = "BeGreat.app"
+            BlueprintName = "BeGreat"
+            ReferencedContainer = "container:BeGreat.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

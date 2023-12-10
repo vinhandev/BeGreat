@@ -1,4 +1,4 @@
-package com.shareshareapp;
+package com.vinhandev.begreat;
 
 import android.app.Application;
 import com.facebook.react.PackageList;

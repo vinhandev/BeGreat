@@ -1,5 +1,5 @@
 {
-  "name": "shareshareapp",
+  "name": "begreat",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -16,8 +16,8 @@
     "type-check": "tsc",
     "test:report": "jest --collectCoverage --coverageDirectory=\"./coverage\" --ci --reporters=default --reporters=jest-junit --coverage",
     "pod-install": "cd ios && pod install && cd ..",
-    "pod-install:hard": "cd ios && rm -rf Pods/ && rm -rf Podfile.lock && rm -rf ShareShareApp.xcworkspace/ && pod install && cd ..",
-    "xcode": "open ios/ShareShareApp.xcworkspace/"
+    "pod-install:hard": "cd ios && rm -rf Pods/ && rm -rf Podfile.lock && rm -rf begreat.xcworkspace/ && pod install && cd ..",
+    "xcode": "open ios/begreat.xcworkspace/"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.2",

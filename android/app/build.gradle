@@ -73,9 +73,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.shareshareapp"
+    namespace "com.vinhandev.begreat"
     defaultConfig {
-        applicationId "com.shareshareapp"
+        applicationId "com.vinhandev.begreat"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
