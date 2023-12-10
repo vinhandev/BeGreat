@@ -1,0 +1,4 @@
+{
+  "phoneInvalidFormat": "Please enter a valid phone number.",
+  "serverSideError": "Internal server error. Please try again later."
+}

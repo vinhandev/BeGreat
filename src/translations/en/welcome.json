@@ -1,0 +1,7 @@
+{
+  "title": "Welcome!",
+  "subtitle": "Sign in to continue",
+  "otpMessage": "We’ll send you an OTP via SMS",
+  "submitButton": "OK",
+  "loadingSubmitPhone":"Is Login ..."
+}
