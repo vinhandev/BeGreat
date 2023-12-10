@@ -16,8 +16,8 @@
     "type-check": "tsc",
     "test:report": "jest --collectCoverage --coverageDirectory=\"./coverage\" --ci --reporters=default --reporters=jest-junit --coverage",
     "pod-install": "cd ios && pod install && cd ..",
-    "pod-install:hard": "cd ios && rm -rf Pods/ && rm -rf Podfile.lock && rm -rf begreat.xcworkspace/ && pod install && cd ..",
-    "xcode": "open ios/begreat.xcworkspace/"
+    "pod-install:hard": "cd ios && rm -rf Pods && rm -rf Podfile.lock && rm -rf BeGreat.xcworkspace/ && pod install && cd ..",
+    "xcode": "open ios/BeGreat.xcworkspace/"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.2",
