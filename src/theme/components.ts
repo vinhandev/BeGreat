@@ -10,12 +10,12 @@ export default ({ layout, backgrounds, fonts, gutters }: ComponentTheme) => {
       width: dimensionSize.screen.width - (metricsSize[1] * 2)
     },
     text1: {
-      ...fonts.pink600,
+      ...fonts.white,
       ...fonts.weight700,
       ...fonts.size_40
     },
     text2: {
-      ...fonts.black300,
+      ...fonts.black,
       ...fonts.weight400,
       ...fonts.size_20
     },
@@ -23,8 +23,8 @@ export default ({ layout, backgrounds, fonts, gutters }: ComponentTheme) => {
     buttonCircle: {
       ...layout.justifyCenter,
       ...layout.itemsCenter,
-      ...backgrounds.pink400,
-      ...fonts.black300,
+      ...backgrounds.white,
+      ...fonts.black,
       height: 70,
       width: 70,
       borderRadius: 35,

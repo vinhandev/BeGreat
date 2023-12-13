@@ -38,13 +38,13 @@ function Button({
   switch (true) {
     case disabled: {
       styles = [
-        backgrounds.grey2,
+        backgrounds.quaternary,
         borders.rounded_6,
         gutters.padding_15,
         layout.justifyCenter,
         layout.itemsCenter,
       ];
-      textStyles = [fonts.grey, fonts.size_16, fonts.weight600];
+      textStyles = [fonts.quaternary, fonts.size_16, fonts.weight600];
       iconColor = colors.white;
       break;
     }
@@ -52,10 +52,10 @@ function Button({
       styles = ({ pressed }) => {
         return [
           isLoading
-            ? backgrounds.pink400
+            ? backgrounds.secondary
             : pressed
-              ? backgrounds.pink900
-              : backgrounds.pink600,
+              ? backgrounds.primary
+              : backgrounds.tertiary,
           ,
           {
             transform: [{ scale: pressed ? 0.98 : 1 }],
@@ -69,7 +69,7 @@ function Button({
         ];
       };
       textStyles = [
-        disabled ? fonts.grey : fonts.white,
+        disabled ? fonts.quaternary : fonts.white,
         fonts.size_16,
         fonts.weight600,
       ];
@@ -81,7 +81,7 @@ function Button({
           isLoading
             ? backgrounds.white
             : pressed
-              ? backgrounds.grey2
+              ? backgrounds.quaternary
               : backgrounds.white,
           ,
           {
@@ -90,7 +90,7 @@ function Button({
             borderWidth: 1,
           },
           borders.rounded_6,
-          borders.grey,
+          borders.quaternary,
           gutters.paddingHorizontal_15,
           layout.justifyCenter,
           layout.itemsCenter,
@@ -98,11 +98,11 @@ function Button({
         ];
       };
       textStyles = [
-        disabled ? fonts.grey : fonts.black100,
+        disabled ? fonts.quaternary : fonts.black,
         fonts.size_16,
         fonts.weight600,
       ];
-      iconColor = colors.black100;
+      iconColor = colors.black;
       break;
 
     default:

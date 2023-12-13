@@ -108,7 +108,7 @@ function Example() {
             <Text style={[fonts.size_40, fonts.italic, fonts.bold]}>
               {t('welcome:title')}
             </Text>
-            <Text style={[fonts.weight400, fonts.pink400]}>
+            <Text style={[fonts.weight400, fonts.white]}>
               {t('welcome:subtitle')}
             </Text>
             <Text style={[fonts.size_16]}>{t('welcome:description')}</Text>
@@ -117,7 +117,7 @@ function Example() {
           <View style={[layout.row, layout.justifyBetween, layout.fullWidth]}>
             <TouchableOpacity
               testID="fetch-user-button"
-              style={[components.buttonCircle, gutters.marginBottom_16]}
+              style={[components.buttonCircle, gutters.marginBottom_15]}
               onPress={() => setCurrentId(Math.ceil(Math.random() * 10 + 1))}
             >
               {isFetching ? (
@@ -125,32 +125,32 @@ function Example() {
               ) : (
                 <ImageVariant
                   source={SendImage}
-                  style={{ tintColor: colors.purple500 }}
+                  style={{ tintColor: colors.primary }}
                 />
               )}
             </TouchableOpacity>
 
             <TouchableOpacity
               testID="change-theme-button"
-              style={[components.buttonCircle, gutters.marginBottom_16]}
+              style={[components.buttonCircle, gutters.marginBottom_15]}
               onPress={() => onChangeTheme()}
             >
               <ImageVariant
                 source={ColorsWatchImage}
-                style={{ tintColor: colors.purple500 }}
+                style={{ tintColor: colors.primary }}
               />
             </TouchableOpacity>
 
             <TouchableOpacity
               testID="change-language-button"
-              style={[components.buttonCircle, gutters.marginBottom_16]}
+              style={[components.buttonCircle, gutters.marginBottom_15]}
               onPress={() =>
                 onChangeLanguage(i18next.language === 'fr' ? 'en' : 'fr')
               }
             >
               <ImageVariant
                 source={TranslateImage}
-                style={{ tintColor: colors.purple500 }}
+                style={{ tintColor: colors.primary }}
               />
             </TouchableOpacity>
           </View>

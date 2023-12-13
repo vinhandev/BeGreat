@@ -49,7 +49,7 @@ export const config = {
   navigationColors: {
     ...DarkTheme.colors,
     background: colorsLight.white,
-    card: colorsLight.pink600,
+    card: colorsLight.primary,
   },
   variants: {
     dark: {
@@ -60,7 +60,7 @@ export const config = {
       navigationColors: {
         ...DarkTheme.colors,
         background: colorsDark.white,
-        card: colorsDark.pink600,
+        card: colorsDark.primary,
       },
     },
   },
