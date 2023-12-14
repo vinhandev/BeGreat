@@ -8,23 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* BeGreatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* BeGreatTests.m */; };
-		05D70F9EE2D0476AB3DFC818 /* TitilliumWeb-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CCCC2320315149DF84E14C71 /* TitilliumWeb-Bold.ttf */; };
 		0C80B921A6F3F58F76C31292 /* libPods-BeGreat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-BeGreat.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		1BE36FAB8B36452CA134816E /* TitilliumWeb-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2FE2420B610947098CEC93AA /* TitilliumWeb-SemiBold.ttf */; };
-		1DD58D0A6F1A432B83811C61 /* TitilliumWeb-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C009829931D04E4F83E74142 /* TitilliumWeb-LightItalic.ttf */; };
-		1E24475C934348C3B784D747 /* TitilliumWeb-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D9C2A6DF8EF4C0C8ABADECD /* TitilliumWeb-Black.ttf */; };
-		2F33FF60CAF2417486A9E8C8 /* TitilliumWeb-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C0FF319E81144184A58A9961 /* TitilliumWeb-SemiBoldItalic.ttf */; };
-		5F0E1FC0D01240FB95F15A53 /* TitilliumWeb-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E5F976EDEF14DE0AAA4A143 /* TitilliumWeb-ExtraLight.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-BeGreat-BeGreatTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-BeGreat-BeGreatTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		9D11D36148A740CDB862782B /* TitilliumWeb-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE9D12E2FAF2402C84D0BDE9 /* TitilliumWeb-Light.ttf */; };
-		C3EC9F05120B4D56AB673215 /* TitilliumWeb-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 755D77D8D45642D494CA5C61 /* TitilliumWeb-ExtraLightItalic.ttf */; };
-		DE155086B67D4044B1A52F15 /* TitilliumWeb-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3338746F97C74810AE66FBB2 /* TitilliumWeb-BoldItalic.ttf */; };
-		EE0A3E5E4A0648E39F741709 /* TitilliumWeb-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F66CCF69E4844500B5BB5A79 /* TitilliumWeb-Italic.ttf */; };
-		FCC709CC64244BB3B47B09DE /* TitilliumWeb-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 13D6A5FBE2904559B482F5F7 /* TitilliumWeb-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -287,17 +276,6 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				1E24475C934348C3B784D747 /* TitilliumWeb-Black.ttf in Resources */,
-				05D70F9EE2D0476AB3DFC818 /* TitilliumWeb-Bold.ttf in Resources */,
-				DE155086B67D4044B1A52F15 /* TitilliumWeb-BoldItalic.ttf in Resources */,
-				5F0E1FC0D01240FB95F15A53 /* TitilliumWeb-ExtraLight.ttf in Resources */,
-				C3EC9F05120B4D56AB673215 /* TitilliumWeb-ExtraLightItalic.ttf in Resources */,
-				EE0A3E5E4A0648E39F741709 /* TitilliumWeb-Italic.ttf in Resources */,
-				9D11D36148A740CDB862782B /* TitilliumWeb-Light.ttf in Resources */,
-				1DD58D0A6F1A432B83811C61 /* TitilliumWeb-LightItalic.ttf in Resources */,
-				FCC709CC64244BB3B47B09DE /* TitilliumWeb-Regular.ttf in Resources */,
-				1BE36FAB8B36452CA134816E /* TitilliumWeb-SemiBold.ttf in Resources */,
-				2F33FF60CAF2417486A9E8C8 /* TitilliumWeb-SemiBoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -651,10 +629,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_CFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_CFLAGS = "$(inherited)  ";
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
 					"-DFOLLY_NO_CONFIG",
@@ -724,10 +699,7 @@
 					"\"$(inherited)\"",
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_CFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_CFLAGS = "$(inherited)  ";
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
 					"-DFOLLY_NO_CONFIG",
