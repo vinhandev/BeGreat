@@ -44,7 +44,7 @@ function Button({
         layout.justifyCenter,
         layout.itemsCenter,
       ];
-      textStyles = [fonts.quaternary, fonts.size_16, fonts.weight600];
+      textStyles = [fonts.white, fonts.size_16, fonts.weight600];
       iconColor = colors.white;
       break;
     }
@@ -68,18 +68,14 @@ function Button({
           layout.row,
         ];
       };
-      textStyles = [
-        disabled ? fonts.quaternary : fonts.white,
-        fonts.size_16,
-        fonts.weight600,
-      ];
+      textStyles = [fonts.white, fonts.size_16, fonts.weight600];
       iconColor = colors.white;
       break;
     case variant === 'secondary':
       styles = ({ pressed }) => {
         return [
           isLoading
-            ? backgrounds.white
+            ? backgrounds.primary
             : pressed
               ? backgrounds.quaternary
               : backgrounds.white,
