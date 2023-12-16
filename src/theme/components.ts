@@ -1,23 +1,29 @@
-import { ImageStyle, TextStyle, ViewStyle } from "react-native";
-import type { ComponentTheme } from "@/types/theme/theme";
-import { dimensionSize, metricsSize } from "./_config";
+import { ImageStyle, TextStyle, ViewStyle } from 'react-native';
+import type { ComponentTheme } from '@/types/theme/theme';
+import { dimensionSize, metricsSize } from './_config';
 
-export default ({ layout, backgrounds, fonts, gutters }: ComponentTheme) => {
+export default ({
+  layout,
+  backgrounds,
+  fonts,
+  gutters,
+  colors,
+}: ComponentTheme) => {
   return {
     container: {
       flex: 1,
       alignSelf: 'center',
-      width: dimensionSize.screen.width - (metricsSize[1] * 2)
+      width: dimensionSize.screen.width - metricsSize[1] * 2,
     },
     text1: {
-      ...fonts.white,
-      ...fonts.weight700,
-      ...fonts.size_40
+      ...fonts.black,
+      ...fonts.weight300,
+      ...fonts.size_16,
     },
     text2: {
       ...fonts.black,
       ...fonts.weight400,
-      ...fonts.size_20
+      ...fonts.size_20,
     },
 
     buttonCircle: {
@@ -33,6 +39,25 @@ export default ({ layout, backgrounds, fonts, gutters }: ComponentTheme) => {
       borderRadius: 140,
       height: 250,
       width: 250,
+    },
+    shadow: {
+      shadowColor: '#000',
+      shadowOffset: {
+        width: 0,
+        height: 2,
+      },
+      shadowOpacity: 0.25,
+      shadowRadius: 3.84,
+
+      elevation: 5,
+    },
+    border1: {
+      borderRadius: 10,
+      borderWidth: 0.3,
+      borderColor: colors.border,
+    },
+    form: {
+      height: 58,
     },
   } as const satisfies Record<string, ImageStyle | TextStyle | ViewStyle>;
 };

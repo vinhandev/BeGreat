@@ -28,13 +28,16 @@ export const generateFontSizes = () => {
 
 export const staticFontStyles = {
   weight700: {
-    fontFamily: "TitilliumWeb-Bold",
+    fontFamily: "Inter-Bold",
   },
   weight600: {
-    fontFamily: "TitilliumWeb-SemiBold",
+    fontFamily: "Inter-SemiBold",
   },
   weight400: {
-    fontFamily: "TitilliumWeb-Regular",
+    fontFamily: "Inter-Regular",
+  },
+  weight300: {
+    fontFamily: "Inter-Light",
   },
   bold: {
     fontWeight: "bold",

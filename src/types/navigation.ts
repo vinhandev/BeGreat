@@ -8,7 +8,7 @@ export type ApplicationStackParamList = {
 };
 
 export type AuthorizationStackParamList = {
-  Welcome: undefined;
+  SignUp: undefined;
   LogIn: undefined;
 };
 

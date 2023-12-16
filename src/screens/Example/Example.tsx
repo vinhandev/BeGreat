@@ -19,9 +19,9 @@ import { fetchOne } from '@/services/users';
 
 import { isImageSourcePropType } from '@/types/guards/image';
 
-import SendImage from '@/images/send.png';
-import ColorsWatchImage from '@/images/colorswatch.png';
-import TranslateImage from '@/images/translate.png';
+import SendImage from '@/assets/images/send.png';
+import ColorsWatchImage from '@/assets/images/colorswatch.png';
+import TranslateImage from '@/assets/images/translate.png';
 
 function Example() {
   const { t } = useTranslation(['example', 'welcome']);
