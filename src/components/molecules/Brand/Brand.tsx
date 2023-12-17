@@ -13,7 +13,7 @@ type Props = {
 };
 
 function Brand({ height, width, mode }: Props) {
-  const { layout, components } = useTheme();
+  const { layout, components, borders } = useTheme();
 
   if (!isImageSourcePropType(LogoLight) || !isImageSourcePropType(LogoDark)) {
     throw new Error('Image source is not valid');
@@ -22,7 +22,7 @@ function Brand({ height, width, mode }: Props) {
   return (
     <View
       testID="brand-img-wrapper"
-      style={[{ height, width }, components.shadow]}
+      style={[{ height, width, borderRadius: 1000 }, components.shadow]}
     >
       <ImageVariant
         testID="brand-img"

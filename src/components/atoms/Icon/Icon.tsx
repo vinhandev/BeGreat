@@ -1,35 +1,62 @@
-import { StyleProp, TextStyle } from 'react-native';
+import { StyleProp, TextStyle, View } from 'react-native';
 import { IconProps } from 'react-native-vector-icons/Icon';
 import IconIonicons from 'react-native-vector-icons/Ionicons';
 
 type Props = IconProps & {
-  name: 'checked'|'clear';
+  name: 'checked'|'clear'|'google'|'facebook'|'apple';
   size: number;
   color: string;
 };
 
 function Icon({ name, color, size, style }: Props) {
   switch (name) {
-    case 'checked':
-      return (
-        <IconIonicons
-          style={style}
-          name={'checkmark'}
-          size={size}
-          color={color}
-        />
-      );
-    case 'clear':
-      return (
-        <IconIonicons
-          style={style}
-          name={'close-outline'}
-          size={size}
-          color={color}
-        />
-      );
+    // case 'checked':
+    //   return (
+    //     <IconIonicons
+    //       style={style}
+    //       name={'checkmark'}
+    //       size={size}
+    //       color={color}
+    //     />
+    //   );
+    // case 'clear':
+    //   return (
+    //     <IconIonicons
+    //       style={style}
+    //       name={'close-outline'}
+    //       size={size}
+    //       color={color}
+    //     />
+    //   );
+    // case 'google':
+    //   return (
+    //     <IconIonicons
+    //       style={style}
+    //       name={'logo-google'}
+    //       size={size}
+    //       color={color}
+    //     />
+    //   );
+    // case 'facebook':
+    //   return (
+    //     <IconIonicons
+    //       style={style}
+    //       name={'logo-facebook'}
+    //       size={size}
+    //       color={color}
+    //     />
+    //   );
+    // case 'apple':
+    //   return (
+    //     <IconIonicons
+    //       style={style}
+    //       name={'logo-apple'}
+    //       size={size}
+    //       color={color}
+    //     />
+    //   );
     default:
-      return null;
+      return <View></View>;
   }
 }
 

@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.2",
+    "@react-native-firebase/app": "^18.7.3",
     "@react-native-masked-view/masked-view": "^0.3.0",
     "@react-navigation/bottom-tabs": "^6.5.11",
     "@react-navigation/native": "^6.1.9",
@@ -40,7 +41,6 @@
     "react-native-rename": "^3.2.13",
     "react-native-safe-area-context": "^4.7.4",
     "react-native-screens": "^3.27.0",
-    "react-native-vector-icons": "^10.0.2",
     "validator": "^13.11.0",
     "zod": "^3.22.4",
     "zustand": "^4.4.7"

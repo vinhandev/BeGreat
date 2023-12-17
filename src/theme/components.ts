@@ -10,10 +10,15 @@ export default ({
   colors,
 }: ComponentTheme) => {
   return {
+    center: {
+      justifyContent: 'center',
+      alignItems: 'center',
+      textAlign: 'center',
+    },
     container: {
       flex: 1,
       alignSelf: 'center',
-      width: dimensionSize.screen.width - metricsSize[1] * 2,
+      width: dimensionSize.screen.width - 20 * 2,
     },
     text1: {
       ...fonts.black,
@@ -24,6 +29,11 @@ export default ({
       ...fonts.black,
       ...fonts.weight400,
       ...fonts.size_20,
+    },
+    formText: {
+      ...fonts.black,
+      ...fonts.weight400,
+      ...fonts.size_16,
     },
 
     buttonCircle: {
@@ -54,10 +64,12 @@ export default ({
     border1: {
       borderRadius: 10,
       borderWidth: 0.3,
-      borderColor: colors.border,
+      borderColor: colors.grey,
     },
     form: {
       height: 58,
+      justifyContent: 'center',
+      padding: 20,
     },
   } as const satisfies Record<string, ImageStyle | TextStyle | ViewStyle>;
 };

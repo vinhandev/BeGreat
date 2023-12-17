@@ -1,36 +1,42 @@
 import { memo } from 'react';
 import { Control } from 'react-hook-form';
-import { StyleProp, Text, View, ViewStyle } from 'react-native';
+import {
+  StyleProp,
+  Text,
+  TextInputProps,
+  TextStyle,
+  View,
+  ViewStyle,
+} from 'react-native';
 import TextInput from './TextInput';
 import { useTheme } from '@/theme';
 
 type Props = {
   label?: string;
-  control: Control;
+  control: Control<any>;
   name: string;
-  variant: 'text' | 'password' | 'age' | 'number' | 'selection';
   wrapStyle?: StyleProp<ViewStyle>;
-  defaultValue?: string;
-};
+} & (
+  | ({
+      variant: 'text' | 'password';
+    } & TextInputProps)
+  | {
+      variant: 'age' | 'number' | 'selection';
+    }
+);
 
-function FormInput({
-  label,
-  control,
-  name,
-  wrapStyle,
-  variant,
-  defaultValue,
-}: Props) {
+function FormInput(props: Props) {
   const { gutters, components } = useTheme();
+  const { control, name, variant, label, wrapStyle } = props;
 
   let body;
   switch (variant) {
     case 'text':
-      body = (
-        <TextInput defaultValue={defaultValue} control={control} name={name} />
-      );
+      body = <TextInput {...props} control={control} name={name} />;
       break;
-
+    case 'password':
+      body = <TextInput secureTextEntry {...props} control={control} name={name} />;
+      break;
     default:
       break;
   }

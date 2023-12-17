@@ -6,6 +6,7 @@ import type { ThemeConfiguration } from '@/types/theme/config';
 const colorsLight = {
   black: '#000000',
   white: '#ffffff',
+  grey:'#6B6B6B',
   primary: '#27374D',
   secondary: '#526D82',
   tertiary: '#9DB2BF',

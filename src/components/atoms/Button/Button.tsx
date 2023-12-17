@@ -51,11 +51,7 @@ function Button({
     case variant === 'primary':
       styles = ({ pressed }) => {
         return [
-          isLoading
-            ? backgrounds.secondary
-            : pressed
-              ? backgrounds.primary
-              : backgrounds.tertiary,
+          pressed ? backgrounds.black : backgrounds.primary,
           ,
           {
             transform: [{ scale: pressed ? 0.98 : 1 }],
@@ -77,16 +73,14 @@ function Button({
           isLoading
             ? backgrounds.primary
             : pressed
-              ? backgrounds.quaternary
-              : backgrounds.white,
+              ? backgrounds.tertiary
+              : backgrounds.quaternary,
           ,
           {
             transform: [{ scale: pressed ? 0.98 : 1 }],
             height: 46,
-            borderWidth: 1,
           },
           borders.rounded_6,
-          borders.quaternary,
           gutters.paddingHorizontal_15,
           layout.justifyCenter,
           layout.itemsCenter,

@@ -1,14 +1,19 @@
 import { useTheme } from '@/theme';
 import { Control, useController } from 'react-hook-form';
-import { TextInput as RNTextInput, View } from 'react-native';
+import { TextInput as RNTextInput, TextInputProps, View } from 'react-native';
 
-type Props = {
+type Props = TextInputProps & {
   control: Control<any>;
   name: string;
   defaultValue?: string;
 };
 
-export default function TextInput({ defaultValue, control, name }: Props) {
+export default function TextInput({
+  defaultValue,
+  control,
+  name,
+  ...props
+}: Props) {
   const {
     field: { value, onChange },
   } = useController({
@@ -16,14 +21,17 @@ export default function TextInput({ defaultValue, control, name }: Props) {
     name,
   });
 
-  const { components } = useTheme();
+  const { components, colors } = useTheme();
 
   return (
     <View style={[components.form, components.border1]}>
       <RNTextInput
+        style={components.formText}
         defaultValue={defaultValue}
         value={value}
         onChangeText={onChange}
+        placeholderTextColor={colors.grey}
+        {...props}
       />
     </View>
   );
