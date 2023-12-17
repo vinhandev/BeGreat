@@ -1,7 +1,7 @@
-import { TextStyle } from "react-native";
-import type { FontColors, FontSizes } from "@/types/theme/fonts";
-import type { UnionConfiguration } from "@/types/theme/config";
-import { config } from "@/theme/_config";
+import { TextStyle } from 'react-native';
+import type { FontColors, FontSizes } from '@/types/theme/fonts';
+import type { UnionConfiguration } from '@/types/theme/config';
+import { config } from '@/theme/_config';
 
 export const generateFontColors = (configuration: UnionConfiguration) => {
   return Object.entries(configuration.fonts.colors ?? {}).reduce(
@@ -12,7 +12,7 @@ export const generateFontColors = (configuration: UnionConfiguration) => {
         },
       });
     },
-    {} as FontColors,
+    {} as FontColors
   );
 };
 
@@ -28,30 +28,30 @@ export const generateFontSizes = () => {
 
 export const staticFontStyles = {
   weight700: {
-    fontFamily: "Inter-Bold",
+    fontFamily: 'Inter-Bold',
   },
   weight600: {
-    fontFamily: "Inter-SemiBold",
+    fontFamily: 'Inter-SemiBold',
   },
   weight400: {
-    fontFamily: "Inter-Regular",
+    fontFamily: 'Inter-Regular',
   },
   weight300: {
-    fontFamily: "Inter-Light",
+    fontFamily: 'Inter-Light',
   },
   bold: {
-    fontWeight: "bold",
+    fontWeight: 'bold',
   },
   italic: {
-    fontStyle: "italic",
+    fontStyle: 'italic',
   },
   uppercase: {
-    textTransform: "uppercase",
+    textTransform: 'uppercase',
   },
   capitalize: {
-    textTransform: "capitalize",
+    textTransform: 'capitalize',
   },
   alignCenter: {
-    textAlign: "center",
+    textAlign: 'center',
   },
 } as const satisfies Record<string, TextStyle>;
