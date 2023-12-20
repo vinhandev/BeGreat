@@ -3,7 +3,7 @@ import Icon from '../Icon/Icon';
 import { useTheme } from '@/theme';
 
 type Props = {
-  name: 'apple' | 'facebook' | 'google';
+  name: 'logo-apple' | 'logo-facebook' | 'logo-google';
   onPress: () => void;
 };
 

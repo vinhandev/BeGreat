@@ -6,7 +6,7 @@ import { View } from 'react-native';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useTheme } from '@/theme';
-import { Button, Icon, TouchableIcon } from '@/components/atoms';
+import { Button, TouchableIcon } from '@/components/atoms';
 
 type FormData = z.infer<typeof loginSchema>;
 
@@ -20,7 +20,7 @@ function LogIn() {
     resolver: zodResolver(loginSchema),
   });
 
-  const onValid = (data: FormData) => {};
+  const onValid = () => {};
 
   return (
     <SafeScreen>
@@ -70,9 +70,9 @@ function LogIn() {
               alignItems: 'center',
             }}
           >
-            <TouchableIcon name="apple" onPress={() => {}} />
-            <TouchableIcon name="google" onPress={() => {}} />
-            <TouchableIcon name="facebook" onPress={() => {}} />
+            <TouchableIcon name="logo-google" onPress={() => {}} />
+            <TouchableIcon name="logo-apple" onPress={() => {}} />
+            <TouchableIcon name="logo-facebook" onPress={() => {}} />
           </View>
         </View>
       </View>

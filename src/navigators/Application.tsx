@@ -7,8 +7,7 @@ import type { ApplicationStackParamList } from '@/types/navigation';
 import HomeNavigator from './Homepage';
 import AuthorizationNavigator from './Authorization';
 import { LoadingScreen, Startup } from '@/screens';
-import { useUserStore } from '@/store/useUserStore';
-import { View, Animated, Easing } from 'react-native';
+import { View } from 'react-native';
 
 const Stack = createStackNavigator<ApplicationStackParamList>();
 
@@ -21,7 +20,10 @@ function ApplicationNavigator() {
         <Stack.Navigator
           initialRouteName="StartUp"
           key={variant}
-          screenOptions={{ headerShown: false, presentation: 'transparentModal' }}
+          screenOptions={{
+            headerShown: false,
+            presentation: 'transparentModal',
+          }}
         >
           <Stack.Screen name="StartUp" component={Startup} />
           <Stack.Screen

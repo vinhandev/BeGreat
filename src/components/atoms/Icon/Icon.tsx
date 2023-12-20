@@ -1,64 +1,27 @@
-import { Text, View } from 'react-native';
+import { memo, useMemo } from 'react';
+import { StyleProp, Text, View, ViewStyle } from 'react-native';
 import { IconProps } from 'react-native-vector-icons/Icon';
-
+import Ionicons from 'react-native-vector-icons/Ionicons';
 type Props = IconProps & {
-  name: 'checked'|'clear'|'google'|'facebook'|'apple';
+  name: 'checked' | 'clear' | 'logo-google' | 'logo-facebook' | 'logo-apple';
   size: number;
   color: string;
+  wrapStyle?: StyleProp<ViewStyle>;
 };
 
-function Icon({ name, color, size, style }: Props) {
-  switch (name) {
-    // case 'checked':
-    //   return (
-    //     <IconIonicons
-    //       style={style}
-    //       name={'checkmark'}
-    //       size={size}
-    //       color={color}
-    //     />
-    //   );
-    // case 'clear':
-    //   return (
-    //     <IconIonicons
-    //       style={style}
-    //       name={'close-outline'}
-    //       size={size}
-    //       color={color}
-    //     />
-    //   );
-    // case 'google':
-    //   return (
-    //     <IconIonicons
-    //       style={style}
-    //       name={'logo-google'}
-    //       size={size}
-    //       color={color}
-    //     />
-    //   );
-    // case 'facebook':
-    //   return (
-    //     <IconIonicons
-    //       style={style}
-    //       name={'logo-facebook'}
-    //       size={size}
-    //       color={color}
-    //     />
-    //   );
-    // case 'apple':
-    //   return (
-    //     <IconIonicons
-    //       style={style}
-    //       name={'logo-apple'}
-    //       size={size}
-    //       color={color}
-    //     />
-    //   );
-    default:
-      return <View>
-        <Text>Hello</Text>
-      </View>;
-  }
+function Icon({ name, color, size, wrapStyle, ...props }: Props) {
+  const BodyIcon = useMemo(() => {
+    switch (name) {
+      case 'logo-facebook':
+      case 'logo-google':
+      case 'logo-apple':
+        return <Ionicons name={name} color={color} size={size} {...props} />;
+      default:
+        return <Ionicons name="image" color={color} size={size} {...props} />;
+    }
+  }, [name, color, size]);
+
+  return <View style={wrapStyle}>{BodyIcon}</View>;
 }
 
-export default Icon;
+export default memo(Icon);
