@@ -1,6 +1,5 @@
-import { StyleProp, TextStyle, View } from 'react-native';
+import { Text, View } from 'react-native';
 import { IconProps } from 'react-native-vector-icons/Icon';
-import IconIonicons from 'react-native-vector-icons/Ionicons';
 
 type Props = IconProps & {
   name: 'checked'|'clear'|'google'|'facebook'|'apple';
@@ -56,7 +55,9 @@ function Icon({ name, color, size, style }: Props) {
     //     />
     //   );
     default:
-      return <View></View>;
+      return <View>
+        <Text>Hello</Text>
+      </View>;
   }
 }
 
