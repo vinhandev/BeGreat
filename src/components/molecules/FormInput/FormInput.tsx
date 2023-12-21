@@ -5,10 +5,10 @@ import TextInput from './TextInput';
 import { useTheme } from '@/theme';
 import { AvatarInput } from './AvatarInput';
 
-type Props<T extends FieldValues> = {
+type Props = {
   label?: string;
-  control: Control<T>;
-  name: T;
+  control: Control<any>;
+  name: string;
   wrapStyle?: StyleProp<ViewStyle>;
 } & (
   | ({
@@ -19,7 +19,7 @@ type Props<T extends FieldValues> = {
     }
 );
 
-function FormInput<T>(props: Props<T extends FieldValues>) {
+function FormInput(props: Props) {
   const { gutters, components } = useTheme();
   const { control, name, variant, label, wrapStyle } = props;
 
