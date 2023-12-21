@@ -1,5 +1,5 @@
 import { memo, useMemo } from 'react';
-import { StyleProp, Text, View, ViewStyle } from 'react-native';
+import { StyleProp, View, ViewStyle } from 'react-native';
 import { IconProps } from 'react-native-vector-icons/Icon';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 type Props = IconProps & {

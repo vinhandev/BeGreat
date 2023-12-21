@@ -1,7 +1,7 @@
 import { createStackNavigator } from '@react-navigation/stack';
 
 import type { AuthorizationStackParamList } from '@/types/navigation';
-import { LogInScreen } from '@/screens';
+import { LogInScreen, SignUpScreen } from '@/screens';
 
 const AuthStack = createStackNavigator<AuthorizationStackParamList>();
 
@@ -14,6 +14,7 @@ function AuthorizationNavigator() {
       }}
     >
       <AuthStack.Screen name={'LogIn'} component={LogInScreen} />
+      <AuthStack.Screen name={'SignUp'} component={SignUpScreen} />
     </AuthStack.Navigator>
   );
 }

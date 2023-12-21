@@ -1,31 +1,25 @@
 import { memo } from 'react';
-import { Control } from 'react-hook-form';
-import {
-  StyleProp,
-  Text,
-  TextInputProps,
-  TextStyle,
-  View,
-  ViewStyle,
-} from 'react-native';
+import { Control, FieldValues } from 'react-hook-form';
+import { StyleProp, Text, TextInputProps, View, ViewStyle } from 'react-native';
 import TextInput from './TextInput';
 import { useTheme } from '@/theme';
+import { AvatarInput } from './AvatarInput';
 
-type Props = {
+type Props<T extends FieldValues> = {
   label?: string;
-  control: Control<any>;
-  name: string;
+  control: Control<T>;
+  name: T;
   wrapStyle?: StyleProp<ViewStyle>;
 } & (
   | ({
-      variant: 'text' | 'password';
+      variant: 'text' | 'password' | 'avatar';
     } & TextInputProps)
   | {
       variant: 'age' | 'number' | 'selection';
     }
 );
 
-function FormInput(props: Props) {
+function FormInput<T>(props: Props<T extends FieldValues>) {
   const { gutters, components } = useTheme();
   const { control, name, variant, label, wrapStyle } = props;
 
@@ -35,7 +29,12 @@ function FormInput(props: Props) {
       body = <TextInput {...props} control={control} name={name} />;
       break;
     case 'password':
-      body = <TextInput secureTextEntry {...props} control={control} name={name} />;
+      body = (
+        <TextInput secureTextEntry {...props} control={control} name={name} />
+      );
+      break;
+    case 'avatar':
+      body = <AvatarInput />;
       break;
     default:
       break;

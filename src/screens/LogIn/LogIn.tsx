@@ -7,10 +7,11 @@ import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useTheme } from '@/theme';
 import { Button, TouchableIcon } from '@/components/atoms';
+import { AuthorizationScreenProps } from '@/types/navigation';
 
 type FormData = z.infer<typeof loginSchema>;
 
-function LogIn() {
+function LogIn({ navigation }: AuthorizationScreenProps) {
   const { components, layout, gutters } = useTheme();
   const { control, handleSubmit } = useForm<FormData>({
     defaultValues: {
@@ -21,6 +22,10 @@ function LogIn() {
   });
 
   const onValid = () => {};
+
+  const onPressSignUp = () => {
+    navigation.navigate('SignUp');
+  };
 
   return (
     <SafeScreen>
@@ -58,7 +63,7 @@ function LogIn() {
             style={{
               marginTop: 10,
             }}
-            onPress={handleSubmit(onValid)}
+            onPress={onPressSignUp}
           >
             Sign Up
           </Button>

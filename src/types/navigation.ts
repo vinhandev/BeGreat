@@ -42,3 +42,5 @@ export type SettingStackParamList = {
 
 export type ApplicationScreenProps =
   StackScreenProps<ApplicationStackParamList>;
+export type AuthorizationScreenProps =
+  StackScreenProps<AuthorizationStackParamList>;

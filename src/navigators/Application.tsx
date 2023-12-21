@@ -8,6 +8,7 @@ import HomeNavigator from './Homepage';
 import AuthorizationNavigator from './Authorization';
 import { LoadingScreen, Startup } from '@/screens';
 import { View } from 'react-native';
+import { BottomSheet } from '@/components/molecules';
 
 const Stack = createStackNavigator<ApplicationStackParamList>();
 
@@ -33,6 +34,7 @@ function ApplicationNavigator() {
           <Stack.Screen name="Homepage" component={HomeNavigator} />
         </Stack.Navigator>
         <LoadingScreen />
+        <BottomSheet/>
       </View>
     </NavigationContainer>
   );
