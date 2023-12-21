@@ -34,7 +34,7 @@ function FormInput(props: Props) {
       );
       break;
     case 'avatar':
-      body = <AvatarInput />;
+      body = <AvatarInput control={control} name={name} />;
       break;
     default:
       break;

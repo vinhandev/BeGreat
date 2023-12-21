@@ -17,7 +17,7 @@ type Props = PressableProps & {
   children: string;
   variant?: 'primary' | 'secondary';
   isLoading?: boolean;
-  style: StyleProp<ViewStyle>;
+  style?: StyleProp<ViewStyle>;
 };
 
 function Button({
