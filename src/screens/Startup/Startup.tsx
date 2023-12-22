@@ -11,7 +11,7 @@ import type { ApplicationScreenProps } from '@/types/navigation';
 import { delay } from '@/utils/helper';
 
 function Startup({ navigation }: ApplicationScreenProps) {
-  const { layout, gutters, fonts, backgrounds, borders } = useTheme();
+  const { layout, gutters, fonts, backgrounds } = useTheme();
   const { t } = useTranslation(['startup']);
 
   const { isSuccess, isFetching, isError } = useQuery({
