@@ -1,12 +1,11 @@
 import { ImageStyle, TextStyle, ViewStyle } from 'react-native';
 import type { ComponentTheme } from '@/types/theme/theme';
-import { dimensionSize, metricsSize } from './_config';
+import { dimensionSize } from './_config';
 
 export default ({
   layout,
   backgrounds,
   fonts,
-  gutters,
   colors,
 }: ComponentTheme) => {
   return {

@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { Control, FieldValues } from 'react-hook-form';
+import { Control } from 'react-hook-form';
 import { StyleProp, Text, TextInputProps, View, ViewStyle } from 'react-native';
 import TextInput from './TextInput';
 import { useTheme } from '@/theme';
@@ -7,7 +7,7 @@ import { AvatarInput } from './AvatarInput';
 
 type Props = {
   label?: string;
-  control: Control<any>;
+  control: Control;
   name: string;
   wrapStyle?: StyleProp<ViewStyle>;
 } & (

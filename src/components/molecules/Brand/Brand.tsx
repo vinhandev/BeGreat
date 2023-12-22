@@ -13,7 +13,7 @@ type Props = {
 };
 
 function Brand({ height, width, mode }: Props) {
-  const { layout, components, borders } = useTheme();
+  const { layout, components } = useTheme();
 
   if (!isImageSourcePropType(LogoLight) || !isImageSourcePropType(LogoDark)) {
     throw new Error('Image source is not valid');

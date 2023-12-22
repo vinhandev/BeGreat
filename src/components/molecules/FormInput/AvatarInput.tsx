@@ -4,13 +4,10 @@ import { useSettingStore } from '@/store/useSettingStore';
 import { useTheme } from '@/theme';
 import { Control, FieldValues, useController } from 'react-hook-form';
 import {
-  Pressable,
   StyleSheet,
-  Text,
   TouchableOpacity,
   View,
 } from 'react-native';
-import { jsiConfigureProps } from 'react-native-reanimated/lib/typescript/reanimated2/core';
 
 type Props = {
   control: Control<FieldValues>;
@@ -32,7 +29,7 @@ const styles = StyleSheet.create({
 export function AvatarInput({ control, name }: Props) {
   const { components, colors, backgrounds, layout } = useTheme();
   const {
-    field: { onChange, value },
+    field: { value },
   } = useController({ control, name });
   const setOpenSheet = useSettingStore((state) => state.setOpenSheet);
   const openBottomSheet = useSettingStore((state) => state.openBottomSheet);
