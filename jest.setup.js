@@ -1,6 +1,7 @@
 // import 'whatwg-fetch';
 import "react-native-gesture-handler/jestSetup";
 import "@testing-library/jest-native/extend-expect";
+import {jest} from '@jest/globals'
 
 jest.mock("react-native-reanimated", () =>
   // eslint-disable-next-line @typescript-eslint/no-unsafe-return

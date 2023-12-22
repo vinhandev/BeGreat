@@ -1,6 +1,6 @@
 import { Button } from '@/components/atoms';
 import { useCameraPermission, useLibraryPermission } from '@/hooks';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { openCamera, openPicker } from 'react-native-image-crop-picker';
 
 const styles = StyleSheet.create({
@@ -15,9 +15,9 @@ export default function BSCamera() {
   const { requestPhoto } = useLibraryPermission();
   const openCam = async () => {
     try {
-      const status = await requestCamera();      
+      const status = await requestCamera();
       if (status) {
-        const imageResponse = await openCamera({
+        await openCamera({
           width: 100,
           height: 100,
           cropping: true,
@@ -31,15 +31,14 @@ export default function BSCamera() {
     try {
       const status = await requestPhoto();
       if (status) {
-        const imageResponse = await openPicker({
+        await openPicker({
           width: 100,
           height: 100,
           cropping: true,
         });
       }
     } catch (error) {
-        console.log(error);
-        
+      console.log(error);
     }
   };
 
