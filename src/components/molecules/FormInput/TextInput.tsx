@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useTheme } from '@/theme';
 import { Control, useController } from 'react-hook-form';
 import { TextInput as RNTextInput, TextInputProps, View } from 'react-native';

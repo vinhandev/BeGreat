@@ -52,7 +52,6 @@ function Button({
       styles = ({ pressed }) => {
         return [
           pressed ? backgrounds.black : backgrounds.primary,
-          ,
           {
             transform: [{ scale: pressed ? 0.98 : 1 }],
             height: 46,
@@ -75,7 +74,6 @@ function Button({
             : pressed
               ? backgrounds.tertiary
               : backgrounds.quaternary,
-          ,
           {
             transform: [{ scale: pressed ? 0.98 : 1 }],
             height: 46,
