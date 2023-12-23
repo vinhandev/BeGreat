@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { memo } from 'react';
 import { Control } from 'react-hook-form';
 import { StyleProp, Text, TextInputProps, View, ViewStyle } from 'react-native';
@@ -7,7 +8,7 @@ import { AvatarInput } from './AvatarInput';
 
 type Props = {
   label?: string;
-  control: Control;
+  control: Control<any>;
   name: string;
   wrapStyle?: StyleProp<ViewStyle>;
 } & (
