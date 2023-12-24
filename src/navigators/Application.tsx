@@ -9,11 +9,13 @@ import AuthorizationNavigator from './Authorization';
 import { LoadingScreen, Startup } from '@/screens';
 import { View } from 'react-native';
 import { BottomSheet } from '@/components/molecules';
+import { useInitialize } from '@/theme/hooks/firebase/useInitialize';
 
 const Stack = createStackNavigator<ApplicationStackParamList>();
 
 function ApplicationNavigator() {
   const { variant, navigationTheme } = useTheme();
+  const { user,initializing } = useInitialize();
 
   return (
     <NavigationContainer theme={navigationTheme}>
@@ -26,15 +28,18 @@ function ApplicationNavigator() {
             presentation: 'transparentModal',
           }}
         >
-          <Stack.Screen name="StartUp" component={Startup} />
-          <Stack.Screen
-            name="Authorization"
-            component={AuthorizationNavigator}
-          />
-          <Stack.Screen name="Homepage" component={HomeNavigator} />
+          {initializing && <Stack.Screen name="StartUp" component={Startup} />}
+          {!user ? (
+            <Stack.Screen
+              name="Authorization"
+              component={AuthorizationNavigator}
+            />
+          ) : (
+            <Stack.Screen name="Homepage" component={HomeNavigator} />
+          )}
         </Stack.Navigator>
         <LoadingScreen />
-        <BottomSheet/>
+        <BottomSheet />
       </View>
     </NavigationContainer>
   );

@@ -5,7 +5,9 @@ import { useTheme } from '@/theme';
 import { signUpSchema } from '@/types/schemas/user';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
-import { FlatList, ScrollView, Text, View } from 'react-native';
+import { Alert, ScrollView, View } from 'react-native';
+import auth from '@react-native-firebase/auth';
+
 import { z } from 'zod';
 
 type FormData = z.infer<typeof signUpSchema>;
@@ -17,7 +19,25 @@ export default function SignUpScreen() {
     resolver: zodResolver(signUpSchema),
   });
 
-  const onValid = (data: FormData) => {};
+  const onValid = (data: FormData) => {
+    auth()
+      .createUserWithEmailAndPassword(data.email, data.password)
+      .then(() => {
+        console.log('User account created & signed in!');
+        Alert.alert('User account created & signed in!');
+      })
+      .catch((error) => {
+        if (error.code === 'auth/email-already-in-use') {
+          console.log('That email address is already in use!');
+        }
+
+        if (error.code === 'auth/invalid-email') {
+          console.log('That email address is invalid!');
+        }
+
+        console.error(error);
+      });
+  };
 
   return (
     <SafeScreen>
@@ -34,14 +54,14 @@ export default function SignUpScreen() {
             label="Email"
             variant="text"
             control={control}
-            name=""
+            name="email"
           />
           <FormInput
             wrapStyle={gutters.paddingTop_15}
             label="Password"
             variant="text"
             control={control}
-            name=""
+            name="password"
           />
           <FormInput
             wrapStyle={gutters.paddingTop_15}
@@ -50,35 +70,9 @@ export default function SignUpScreen() {
             control={control}
             name=""
           />
-          <FormInput
-            wrapStyle={gutters.paddingTop_15}
-            label="Age"
-            variant="text"
-            control={control}
-            name=""
-          />
-          <FormInput
-            wrapStyle={gutters.paddingTop_15}
-            label="Weight"
-            variant="text"
-            control={control}
-            name=""
-          />
-          <FormInput
-            wrapStyle={gutters.paddingTop_15}
-            label="Height"
-            variant="text"
-            control={control}
-            name=""
-          />
-          <FormInput
-            wrapStyle={gutters.paddingTop_15}
-            label="Gender"
-            variant="text"
-            control={control}
-            name=""
-          />
-          <Button style={gutters.paddingTop_20}>Sign Up</Button>
+          <Button onPress={handleSubmit(onValid)} style={gutters.paddingTop_20}>
+            Sign Up
+          </Button>
         </ScrollView>
       </View>
     </SafeScreen>

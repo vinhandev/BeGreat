@@ -2,12 +2,13 @@ import { Brand, FormInput } from '@/components/molecules';
 import { SafeScreen } from '@/components/template';
 import { loginSchema } from '@/types/schemas/user';
 import { useForm } from 'react-hook-form';
-import { View } from 'react-native';
+import { Alert, View } from 'react-native';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useTheme } from '@/theme';
 import { Button, TouchableIcon } from '@/components/atoms';
 import { AuthorizationScreenProps } from '@/types/navigation';
+import auth from '@react-native-firebase/auth';
 
 type FormData = z.infer<typeof loginSchema>;
 
@@ -21,7 +22,25 @@ function LogIn({ navigation }: AuthorizationScreenProps) {
     resolver: zodResolver(loginSchema),
   });
 
-  const onValid = () => {};
+  const onValid = (data: FormData) => {
+    auth()
+      .signInWithEmailAndPassword(data.email, data.password)
+      .then(() => {
+        console.log('User account signed in!');
+        Alert.alert('Sign In')
+      })
+      .catch((error) => {
+        if (error.code === 'auth/email-already-in-use') {
+          console.log('That email address is already in use!');
+        }
+
+        if (error.code === 'auth/invalid-email') {
+          console.log('That email address is invalid!');
+        }
+
+        console.error(error);
+      });
+  };
 
   const onPressSignUp = () => {
     navigation.navigate('SignUp');
