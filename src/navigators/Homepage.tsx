@@ -17,7 +17,7 @@ function HomepageNavigator() {
       <HomeTab.Screen
         component={() => (
           <View>
-            <Text>hello WOrld</Text>
+            <Text>Home Page</Text>
             <Button title="Log Out" onPress={signOut} />
           </View>
         )}
