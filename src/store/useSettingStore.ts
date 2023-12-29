@@ -1,4 +1,4 @@
-import { BottomSheetType } from '@/components/molecules/BottomSheet/BottomSheet';
+import { BottomSheetType } from '@/components/molecules/common/BottomSheet/BottomSheet';
 import { create } from 'zustand';
 
 type InitState = {

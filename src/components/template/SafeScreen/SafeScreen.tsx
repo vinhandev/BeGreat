@@ -1,17 +1,23 @@
-import { KeyboardAvoidingView, SafeAreaView, StatusBar } from 'react-native';
+import { SafeAreaView, StatusBar } from 'react-native';
 
 import { useTheme } from '@/theme';
 
-import type { PropsWithChildren } from 'react';
-
-function SafeScreen({ children }: PropsWithChildren) {
+type Props = {
+  children: React.ReactNode;
+  background?: string;
+};
+function SafeScreen({ children, background }: Props) {
   const { layout, variant, navigationTheme } = useTheme();
 
   return (
     <SafeAreaView
       style={[
         layout.flex_1,
-        { backgroundColor: navigationTheme.colors.background },
+        {
+          backgroundColor: background
+            ? background
+            : navigationTheme.colors.background,
+        },
       ]}
     >
       <StatusBar

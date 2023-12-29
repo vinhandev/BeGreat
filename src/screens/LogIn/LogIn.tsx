@@ -50,7 +50,7 @@ function LogIn({ navigation }: AuthorizationScreenProps) {
     <SafeScreen>
       <View style={[components.container, layout.justifyCenter]}>
         <View style={components.center}>
-          <Brand height={100} width={100} />
+          <Brand height={200} width={200} />
         </View>
         <View>
           <FormInput

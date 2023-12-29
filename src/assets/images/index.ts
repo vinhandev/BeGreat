@@ -1,9 +1,10 @@
-import icon_checked from './icon_checked.png';
+import logo from './logo.png';
 import default_avatar from './default_avatar.png';
+import { ImageURISource } from 'react-native';
 
-const images = {
-  icon_checked,
-  default_avatar,
+const Images = {
+  logo: logo as ImageURISource,
+  default_avatar: default_avatar as ImageURISource,
 };
 
-export default images;
+export default Images;
